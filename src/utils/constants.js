@@ -16,6 +16,10 @@ export const songs = [
     url: new URL('../assets/just-breathe-lyrics.mp3', import.meta.url).href
   },
   {
+    name: 'Shiiiit Final Cut (no lyrics)',
+    url: new URL('../assets/shiiit-official.mp3', import.meta.url).href
+  },
+  {
     name: 'La Luz (no lyrics)',
     url: new URL('../assets/la-luz.mp3', import.meta.url).href
   },
