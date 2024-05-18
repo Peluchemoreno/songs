@@ -67,6 +67,7 @@
   font-size: 11px;
   width: 300px;
   padding: 5px;
+  padding-top: 0;
   line-height: 10px;
   top: 60px;
   visibility: visible;
