@@ -3,12 +3,15 @@ import Song from '../Song/Song'
 import { songs } from '../../utils/constants'
 import Header from '../Header/Header'
 import Lyrics from '../Lyrics/Lyrics'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import FilterBar from '../FilterBar/FilterBar'
+import Songs from '../Songs/Songs'
 function App() {
 
 
   const [modalOpened, setModalOpened] = useState(false)
   const [songInfo, setSongInfo] = useState({})
+  const [filterOption, setFilterOption] = useState('no lyrics')
 
   function scrollToTop(){
     window.scrollTo(0, 0)
@@ -32,14 +35,8 @@ function App() {
     <div className='app'>
       <div className="app__container">
         <Header />
-        <ul className='songs'>
-          {songs.map((song, index) => {
-            return (
-              <Song key={index} name={song.name} url={song.url} image={song.image} lyrics={song.lyrics[0] && song.lyrics[1]} toggleModal={toggleModal}/>
-            )
-          })}
-
-        </ul> 
+        <FilterBar setFilterOption={setFilterOption}/>
+        <Songs songs={songs} toggleModal={toggleModal} filterOption={filterOption} />
       </div>
         <Lyrics modalOpened={modalOpened} toggleModal={toggleModal} songInfo={songInfo} closeModal={closeModal}/>
     </div>
@@ -47,3 +44,10 @@ function App() {
 }
 
 export default App
+
+
+// let lyricFilteredSongs = songs.filter(song => {
+//   return song.lyrics[0] === true;
+// })
+
+// console.log(lyricFilteredSongs)
