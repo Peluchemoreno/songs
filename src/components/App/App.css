@@ -6,8 +6,9 @@
 }
 
 .app {
-  background-color: rgb(48, 61, 61);
+  background-color: #001021;
   display: flex;
+  position: relative;
   width: 100%;
 }
 
@@ -16,6 +17,7 @@
   margin: 0 auto;
   width: 100%;
   padding-top: 20px;
+  position: relative;
 }
 
 .songs {

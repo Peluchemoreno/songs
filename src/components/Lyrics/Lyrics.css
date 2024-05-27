@@ -1,0 +1,59 @@
+.lyrics__overlay{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+.lyrics__overlay_visible {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+.lyrics__content {
+  width: 70%;
+  height: 80%;
+  position: absolute;
+}
+
+.lyrics__title, .lyrics__lyrics {
+  text-align: center;
+}
+
+.lyrics__title {
+  margin-top: 10%;
+  margin-bottom: 30px;
+}
+
+.lyrics__lyrics {
+  line-height: 34px;
+  font-size: 20px;
+  text-align: left;
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+
+.lyrics__close-button {
+  position: sticky;
+  height: 32px;
+  left: 90%;
+  top: 10px;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
+.lyrics__close-button:hover{
+  transform: scale(1.2);
+}
